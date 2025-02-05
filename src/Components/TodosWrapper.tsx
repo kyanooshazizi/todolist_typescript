@@ -40,12 +40,24 @@ function TodosWrapper() {
   };
 
   const toggleComplete = (id: string) => {
+    // setTodos(
+    //   todos.map((todo) =>
+    //     todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    //   )
+    // );
+    let x:TodoType=todos.find((item)=>item.id==id)!
+    let y:TodoType[]=todos.filter((item)=>item.id!=id)!
     setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
-    );
+      [
+        ...y,
+        {
+          ...x,
+          completed: !x.completed
+        }
 
+      ]
+    )
+    
     return true;
   };
 
