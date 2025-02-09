@@ -1,4 +1,3 @@
-import React from "react";
 import { Todo as TodoType } from "./Todos.types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
